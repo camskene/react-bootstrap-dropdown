@@ -2,8 +2,8 @@ var React = require('react');
 
 var Button = React.createClass({
   render: function() {
-  	return <button className="btn btn-default dropdown-toggle" type="button">
-      {this.props.title} <span className="caret"></span>
+    return <button onClick={this.props.whenClicked} className={"btn " + this.props.className} type="button">
+      {this.props.title} <span className={this.props.subTitleClassName}>{this.props.subTitle}</span>
     </button>
   }
 });
